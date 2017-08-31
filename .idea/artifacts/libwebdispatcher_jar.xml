@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="libwebdispatcher:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/libwebdispatcher_jar</output-path>
+    <root id="archive" name="libwebdispatcher.jar">
+      <element id="module-output" name="libwebdispatcher" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-io-2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpcore-nio-4.2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/reflections-0.9.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpcore-ab-4.2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpcore-4.2.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
