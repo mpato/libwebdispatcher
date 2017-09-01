@@ -83,4 +83,17 @@ public class RequestListenerThread extends Thread {
             }
         }
     }
+
+    public int getServerPort() {
+        if (this.serversocket == null)
+            return -1;
+        return this.serversocket.getLocalPort();
+    }
+
+    public void close() throws IOException {
+        interrupt();
+        if (this.serversocket == null)
+            return;
+        this.serversocket.close();
+    }
 }

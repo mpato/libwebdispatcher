@@ -45,12 +45,28 @@ public class WebServerApplication {
                 logger.log(LogType.HTTP, "Failed to init HTTP Server", ResultStatus.FAILED);
                 return false;
             }
-            requestsThread.setDaemon(false);
+            requestsThread.setDaemon(config.server.isDaemon);
             requestsThread.start();
             return true;
         } catch (Throwable e) {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public int getServerPort() {
+        if (this.requestsThread == null)
+            return -1;
+        return this.requestsThread.getServerPort();
+    }
+
+    public void stop() {
+        try {
+            if (requestsThread != null)
+                requestsThread.close();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
     }
 }

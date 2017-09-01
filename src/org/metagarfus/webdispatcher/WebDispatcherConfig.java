@@ -16,6 +16,8 @@ public class WebDispatcherConfig {
     public class HTTPServer {
         public String name = "LibWebDispatcherServer/1.0";
         public int port = 8085;
+        public boolean isDaemon = false;
+
         private HTTPServer(){;
         }
     }
